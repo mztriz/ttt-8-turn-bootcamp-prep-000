@@ -26,13 +26,8 @@ def move(board, index, player = "X")
 end
 
 def turn(board)
-  index = 0
-  
-  while !index.between?(1,9)
-    puts "Please enter 1-9:"
-    index = gets.strip.to_i
-  end
-  
+  puts "Please enter 1-9:"
+  index = gets.strip.to_i
   index = input_to_index(index)
   
   if valid_move?(board, index)
@@ -41,5 +36,4 @@ def turn(board)
   else
     turn(board)
   end
-
 end
